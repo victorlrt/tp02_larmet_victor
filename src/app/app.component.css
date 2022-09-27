@@ -1,0 +1,21 @@
+*, body {
+  font-family: 'Arial', sans-serif;
+}
+
+html, body {
+  background-color: #152733;
+}
+
+h1 {
+  color: white;
+  align-items: center;
+  text-align: center;
+}
+
+.flex-form-summary {
+  display: flex;
+  flex-direction :row;
+  align-items: center;
+  justify-content : center;
+
+}

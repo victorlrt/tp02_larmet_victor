@@ -1,0 +1,30 @@
+<div class="form-body">
+  <div class="form-holder">
+    <div class="form-content">
+      <div class="form-items">
+        <form action="" method="post" id="validation">
+          <label>Lastname : </label> <input type="text" placeholder="LARMET" [(ngModel)]="lastname"/> <br>
+          <label>Firstname : </label> <input type="text" placeholder="Victor" [(ngModel)]="firstname"/> <br>
+          <label>Zip code : </label> <input type="number" placeholder="67000" [(ngModel)]="zipCode"> <br>
+          <label>Tel : </label> <input type="tel" placeholder="0606060606" [(ngModel)]="tel"/> <br>
+          <label>Email : </label> <input type="email" placeholder="Email" [(ngModel)]="email"/> <br>
+          <label>Gender : </label>
+          <div>
+            <input type="radio" name="gender" value="male"> <label> Male</label>
+            <input type="radio" name="gender" value="female"> <label> Female</label>
+          </div>
+
+          <div>
+            <label>Login : </label> <input type="text" placeholder="Login" [(ngModel)]="login"/> <br>
+            <label>Password : </label> <input type="password" id="password" placeholder="Password" [(ngModel)]="password"/> <br>
+            <label>Verification Password : </label> <input type="password" id="verifPassword"
+              placeholder="Verification Password" [(ngModel)]="passwordCheck" /> <br>
+          </div>
+
+          <button (click)="clic()" type="submit">Valider</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
