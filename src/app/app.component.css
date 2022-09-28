@@ -2,9 +2,13 @@
   font-family: 'Arial', sans-serif;
 }
 
+
 html, body {
   background-color: #152733;
-}
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  min-height: 100vh;}
 
 h1 {
   color: white;
@@ -19,3 +23,4 @@ h1 {
   justify-content : center;
 
 }
+
