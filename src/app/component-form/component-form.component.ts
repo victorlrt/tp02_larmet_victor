@@ -9,20 +9,21 @@ export class ComponentFormComponent implements OnInit {
 
   constructor() { }
 
-  lastname : String = "";
-  firstname : String = "";
-  zipCode : Number = 0;
-  tel : String = "";
-  email : String = "";
-  login : String = "";
-  password : String = "";
-  passwordCheck : String = "";
+  ngLastname : String = "";
+  ngFirstname : String = "";
+  ngZipCode : Number = 0;
+  ngTel : String = "";
+  ngEmail : String = "";
+  ngLogin : String = "";
+  ngPassword : String = "";
+  ngPasswordCheck : String = "";
 
   ngOnInit(): void {
   }
 
 
-  clic () {
+  clicChange (val : String) {
+    this.ngLastname = val;
   }
 
 }

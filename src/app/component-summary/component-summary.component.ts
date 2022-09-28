@@ -24,9 +24,10 @@ export class ComponentSummaryComponent implements OnInit {
 
   @Output() change: EventEmitter<String> = new EventEmitter<String>();
 
-
   clic () {
-    this.change.emit( 'Bonjour ' + this.lastname);
+    this.change.emit(this.lastname);
   }
+
+
 
 }

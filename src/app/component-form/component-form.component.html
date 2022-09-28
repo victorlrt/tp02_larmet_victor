@@ -2,28 +2,29 @@
   <div class="form-holder">
     <div class="form-content">
       <div class="form-items">
-        <form action="" method="post" id="validation">
-          <label>Lastname : </label> <input type="text" placeholder="LARMET" [(ngModel)]="lastname"/> <br>
-          <label>Firstname : </label> <input type="text" placeholder="Victor" [(ngModel)]="firstname"/> <br>
-          <label>Zip code : </label> <input type="number" placeholder="67000" [(ngModel)]="zipCode"> <br>
-          <label>Tel : </label> <input type="tel" placeholder="0606060606" [(ngModel)]="tel"/> <br>
-          <label>Email : </label> <input type="email" placeholder="Email" [(ngModel)]="email"/> <br>
+          <label>Lastname : </label> <input type="text" placeholder="Lastname" [(ngModel)]="ngLastname"/> <br>
+          <label>Firstname : </label> <input type="text" placeholder="Firstname" [(ngModel)]="ngFirstname"/> <br>
+          <label>Zip code : </label> <input type="number" placeholder="Zip code" [(ngModel)]="ngZipCode"> <br>
+          <label>Tel : </label> <input type="tel" placeholder="Telephone" [(ngModel)]="ngTel"/> <br>
+          <label>Email : </label> <input type="email" placeholder="Email" [(ngModel)]="ngEmail"/> <br>
           <label>Gender : </label>
           <div>
-            <input type="radio" name="gender" value="male"> <label> Male</label>
-            <input type="radio" name="gender" value="female"> <label> Female</label>
+            <input type="radio" name="gender" value="male" checked> <label> Male</label>
+            <input type="radio" name="gender" value="female" > <label> Female</label>
           </div>
 
           <div>
-            <label>Login : </label> <input type="text" placeholder="Login" [(ngModel)]="login"/> <br>
-            <label>Password : </label> <input type="password" id="password" placeholder="Password" [(ngModel)]="password"/> <br>
+            <label>Login : </label> <input type="text" placeholder="Login" [(ngModel)]="ngLogin"/> <br>
+            <label>Password : </label> <input type="password" id="password" placeholder="Password" [(ngModel)]="ngPassword"/> <br>
             <label>Verification Password : </label> <input type="password" id="verifPassword"
-              placeholder="Verification Password" [(ngModel)]="passwordCheck" /> <br>
+              placeholder="Verification Password" [(ngModel)]="ngPasswordCheck" /> <br>
           </div>
 
-          <button (click)="clic()" type="submit">Valider</button>
-
-        </form>
+          
+          <p>test : {{ngLastname}}</p>
+        <app-component-summary [lastname]="ngLastname" (change)="clicChange($event)">
+          
+        </app-component-summary>
       </div>
     </div>
   </div>
