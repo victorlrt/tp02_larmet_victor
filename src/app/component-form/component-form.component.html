@@ -1,7 +1,7 @@
 <div class="form-body">
   <div class="form-holder">
     <div class="form-content">
-      <div class="form-items" *ngIf="showForm ; else showClient">
+      <div class="form-items" >
         <label>Lastname : </label> <input type="text" placeholder="Lastname" [(ngModel)]="ngLastname" /> <br>
         <label>Firstname : </label> <input type="text" placeholder="Firstname" [(ngModel)]="ngFirstname" /> <br>
         <label>Zip code : </label> <input type="number" placeholder="Zip code" [(ngModel)]="ngZipCode"> <br>
@@ -21,20 +21,20 @@
             placeholder="Verification Password" [(ngModel)]="ngPasswordCheck" /> <br>
         </div>
 
-        <button (click)="showForm=false">Envoyer</button>
+        <button (click)="showSummary=true">Send</button>
 
         <p>Test synchro : {{ngLastname}}</p>
 
       </div>
-      <ng-template #showClient>
-        <app-component-summary [lastname]="ngLastname" [firstname]="ngFirstname" 
+      <ng-container *ngIf="showSummary ; showSummary">
+        <app-component-summary showSummary [lastname]="ngLastname" [firstname]="ngFirstname" 
         [zipCode]="ngZipCode" [tel]="ngTel" [email]="ngEmail" 
         [gender]="ngGender"
         [login]="ngLogin" [password]="ngPassword" [passwordCheck]="ngPasswordCheck" 
          (change)="clicChange($event)">
 
         </app-component-summary>
-      </ng-template>
+      </ng-container>
     </div>
   </div>
 </div>

@@ -21,8 +21,8 @@ export class ComponentSummaryComponent {
   @Output() change: EventEmitter<boolean> = new EventEmitter<boolean>();
 
 
-  clic () {
-    this.change.emit(true);
+  Close () {
+    this.change.emit(false);
   }
 
 

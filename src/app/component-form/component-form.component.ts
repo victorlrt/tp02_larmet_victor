@@ -19,11 +19,11 @@ export class ComponentFormComponent {
   ngPassword : String = "";
   ngPasswordCheck : String = "";
 
-  showForm = true
+  showSummary = false
 
 
   clicChange (val : boolean) {
-    this.showForm = val
+    this.showSummary = val
   }
 
 }
