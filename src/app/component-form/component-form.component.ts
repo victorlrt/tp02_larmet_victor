@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './component-form.component.html',
   styleUrls: ['./component-form.component.css']
 })
-export class ComponentFormComponent implements OnInit {
+export class ComponentFormComponent {
 
   constructor() { }
 
@@ -14,16 +14,16 @@ export class ComponentFormComponent implements OnInit {
   ngZipCode : Number = 0;
   ngTel : String = "";
   ngEmail : String = "";
+  ngGender : String = "";
   ngLogin : String = "";
   ngPassword : String = "";
   ngPasswordCheck : String = "";
 
-  ngOnInit(): void {
-  }
+  showForm = true
 
 
-  clicChange (val : String) {
-    this.ngLastname = val;
+  clicChange (val : boolean) {
+    this.showForm = val
   }
 
 }

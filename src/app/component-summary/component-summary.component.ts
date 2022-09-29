@@ -5,28 +5,26 @@ import { Component, Output, OnInit, Input, EventEmitter } from '@angular/core';
   templateUrl: './component-summary.component.html',
   styleUrls: ['./component-summary.component.css']
 })
-export class ComponentSummaryComponent implements OnInit {
+export class ComponentSummaryComponent {
 
-  constructor() { }
 
   @Input() lastname : String = "";
   @Input() firstname : String = "";
   @Input() zipCode : Number = 0;
   @Input() tel : String = "";
   @Input() email : String = "";
+  @Input() gender : String = "";
   @Input() login : String = "";
   @Input() password : String = "";
   @Input() passwordCheck : String = "";
+  
+  @Output() change: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-
-  ngOnInit(): void {
-  }
-
-  @Output() change: EventEmitter<String> = new EventEmitter<String>();
 
   clic () {
-    this.change.emit(this.lastname);
+    this.change.emit(true);
   }
+
 
 
 
